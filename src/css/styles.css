@@ -1,18 +1,98 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-/* Common styles */
-@import url('./reset.css');
-@import url('./base.css');
-@import url('./container.css');
-@import url('./animations.css');
+body {
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
+  
+}
 
-/* Sections style */
-@import url('./header.css');
-@import url('./vite-promo.css');
-@import url('./badges.css');
-@import url('./back-link.css');
-@import url('./footer.css');
+.form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 8px;
+}
+
+input[type='text'] {
+font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.04em;
+color: #808080;
+border-radius: 4px;
+
+  padding: 10px;
+  font-size: 16px;
+  width: 300px;
+  
+}
+
+button {
+  font-weight: 500;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.04em;
+color: #fff;
+  background-color: #4e75ff;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-color: transparent;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #6c8cff;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 24px;
+ 
+}
+
+.photo-card {
+  border: 1px solid #808080;
+  border-radius: 10px;
+  overflow: hidden;
+ 
+}
+
+.photo-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+a{
+  text-decoration: none;
+}
+
+.info {
+  padding: 10px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+ gap: 24px;
+  color: #2e2f42;
+}
+
+.loader {
+  display: none;
+  margin: 20px auto;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.loader.visible {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+.loader.visible {
+  display: block;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
