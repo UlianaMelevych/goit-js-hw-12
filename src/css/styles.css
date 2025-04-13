@@ -18,7 +18,6 @@ line-height: 1.5;
 letter-spacing: 0.04em;
 color: #808080;
 border-radius: 4px;
-
   padding: 10px;
   font-size: 16px;
   width: 300px;
@@ -47,15 +46,13 @@ button:hover {
   gap: 24px;
  
 }
-
-.photo-card {
+.gallery-item {
   border: 1px solid #808080;
   border-radius: 10px;
   overflow: hidden;
- 
 }
 
-.photo-card img {
+.gallery-item img {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -73,24 +70,34 @@ a{
  gap: 24px;
   color: #2e2f42;
 }
-
-.loader {
+.load-more {
   display: none;
   margin: 20px auto;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.loader.visible {
-  display: block;
+.load-more:hover {
+  background-color: #2980b9;
 }
-.hidden {
+
+
+.loader,
+.load-more {
   display: none;
 }
-.loader.visible {
+
+.loader.visible,
+.load-more.visible {
   display: block;
 }
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
